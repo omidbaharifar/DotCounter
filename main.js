@@ -7,7 +7,7 @@ doubleDots = ["ت", "ق"],
 tripleDots = ["پ", "ث", "چ", "ژ", "ش"],
 midLetterDots = ["ی"];
 
-const persianLettersRegex = /^[آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی]+$/;
+const persianLettersRegex = /^[آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیـ]+$/;
 
 // input and result tags
 inputTag = document.getElementById("text"),
