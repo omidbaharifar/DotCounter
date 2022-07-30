@@ -7,6 +7,8 @@ doubleDots = ["ت", "ق"],
 tripleDots = ["پ", "ث", "چ", "ژ", "ش"],
 midLetterDots = ["ی"];
 
+const persianLettersRegex = /^[آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیـ]+$/;
+
 // input and result tags
 inputTag = document.getElementById("text"),
 result = document.getElementById("dots");
@@ -33,7 +35,7 @@ function dotCounter(text) {
 
         // Check for letters that only have dots in the middle of the string
         if (midLetterDots.includes(letter) && i !== spText.length - 1) {
-            if (spText[i+1] !== " ") {
+            if (spText[i+1] && persianLettersRegex.test(spText[i+1])) {
                 dotsCount+= 2;
             }
         }
